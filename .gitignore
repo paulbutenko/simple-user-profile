@@ -20,3 +20,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.project
+/.settings
+/simple-user-profile-api/.project
+/simple-user-profile-api/.settings
+/simple-user-profile-api/target
+/simple-user-profile-api/.classpath
+/simple-user-profile-client/.settings
+/simple-user-profile-client/.classpath
+/simple-user-profile-client/.project

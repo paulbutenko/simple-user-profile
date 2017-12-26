@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  simple-user-profile-api:
+    image: simple-user-profile-api
+    ports:
+      - "5555:8080"
+
+#  simple-user-profile-client:
+#    image: simple-user-profile-client
+#    ports:
+#      - "8080:4444"
