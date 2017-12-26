@@ -1,6 +1,6 @@
 # simple-user-profile
 
-This project demos simple user profile rest api with Vaadin client application.
+This project is simple user profile rest api with Vaadin client application.
 
 
 ## simple-user-profile-api
