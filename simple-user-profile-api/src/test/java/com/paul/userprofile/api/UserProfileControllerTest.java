@@ -6,8 +6,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -46,7 +46,7 @@ public class UserProfileControllerTest {
         userProfile.setId(1L);
         userProfile.setFirstName("Test");
         userProfile.setLastName("Test");
-        userProfile.setBirthDate(new Date());
+        userProfile.setBirthDate(LocalDate.now());
 
         List<UserProfile> actualList = Arrays.asList(userProfile);
         Mockito.when(userProfileRepository.findAll()).thenReturn(actualList);
@@ -73,7 +73,7 @@ public class UserProfileControllerTest {
         userProfile.setId(id);
         userProfile.setFirstName("Test");
         userProfile.setLastName("Test");
-        userProfile.setBirthDate(new Date());
+        userProfile.setBirthDate(LocalDate.now());
 
         Mockito.when(userProfileRepository.getOne(id)).thenReturn(userProfile);
 
@@ -98,7 +98,7 @@ public class UserProfileControllerTest {
         userProfile.setId(id);
         userProfile.setFirstName("Test");
         userProfile.setLastName("Test");
-        userProfile.setBirthDate(new Date());
+        userProfile.setBirthDate(LocalDate.now());
 
         Mockito.when(userProfileRepository.getOne(id)).thenReturn(userProfile);
 
@@ -115,14 +115,14 @@ public class UserProfileControllerTest {
         UserProfile userProfileToSave = new UserProfile();
         userProfileToSave.setFirstName("Test");
         userProfileToSave.setLastName("Test");
-        userProfileToSave.setBirthDate(new Date());
+        userProfileToSave.setBirthDate(LocalDate.now());
         
         
         UserProfile userProfileToReturn = new UserProfile();
         userProfileToReturn.setId(id);
         userProfileToReturn.setFirstName("Test");
         userProfileToReturn.setLastName("Test");
-        userProfileToReturn.setBirthDate(new Date());
+        userProfileToReturn.setBirthDate(LocalDate.now());
 
 
         Mockito.when(userProfileRepository.save(userProfileToSave)).thenReturn(userProfileToReturn);

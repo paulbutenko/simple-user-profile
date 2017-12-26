@@ -7,7 +7,9 @@ services:
     ports:
       - "5555:8080"
 
-#  simple-user-profile-client:
-#    image: simple-user-profile-client
-#    ports:
-#      - "8080:4444"
+  simple-user-profile-client:
+    image: simple-user-profile-client
+    environment:
+      - PROFILE_API_URL=simple-user-profile-api:8080
+    ports:
+      - "4444:8080"

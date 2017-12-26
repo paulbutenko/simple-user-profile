@@ -1,22 +1,14 @@
-package com.paul.userprofile.api;
+package com.paul.userprofile.client;
 
 import java.time.LocalDate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-@Entity
-//Excludes hibernate's properties from json entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class UserProfile {
+    
+    public static String[] FIELDS = new String[] {"id", "firstName", "lastName", "birthDate"};
 
-    @Id
-    @GeneratedValue
     private Long id;
     private String firstName;
     private String lastName;
@@ -51,6 +43,7 @@ public class UserProfile {
         this.lastName = lastName;
     }
 
+    
     public LocalDate getBirthDate() {
         return birthDate;
     }

@@ -10,6 +10,10 @@ This project demos simple user profile rest api with Vaadin client application.
 	DELETE /user-profiles/{id} - deletes user profile by provided id
 	
 	
+## simple-user-profile-client
+
+Built using Vaadin. Allows simple CRUD operation on user profile entity.
+
 
 ## build and run
 
